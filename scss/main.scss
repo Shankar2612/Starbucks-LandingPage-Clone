@@ -1,0 +1,119 @@
+@import "variables";
+@import "config";
+@import "primary";
+@import "footer";
+
+.container {
+    width: 100%;
+    // overflow-x: hidden;
+    @include flex(flex, column, flex-start, flex-start);
+
+    .navbar {
+        width: inherit;
+        padding: 25px 40px;
+        @include flex(flex, row, center, space-between);
+        box-shadow: 0px 0px 3px grey;
+        box-sizing: border-box;
+        z-index: 2;
+
+        .left-navbar {
+            width: fit-content;
+            @include flex(flex, row, center, flex-start);
+
+            .block {
+                width: 50px;
+            };
+
+            .nav-items {
+                list-style-type: none;
+                @include flex(flex, row, center, space-between);
+                margin-left: 40px;
+
+                li {
+                    margin-right: 25px;
+                    text-transform: uppercase;
+                    font: {
+                        size: 13.5px;
+                        weight: bolder;
+                        family: $text-font;
+                    };
+                    letter-spacing: 1.5px;
+
+                    &:hover {
+                        color: $text-hover-color;
+                        cursor: pointer;
+                    };
+                };
+            };
+        };
+
+        .right-navbar {     
+            .fa-bars {
+                display: none;
+            }       
+            
+            .nav-items {
+                list-style-type: none;
+                @include flex(flex, row, center, space-between);
+                margin-left: 35px;
+
+                .nav-item {
+                    margin-right: 18px;
+                    font: {
+                        size: 14px;
+                        weight: 600;
+                        family: $text-font;
+                    };
+                    border: 1px solid black;
+                    padding: 6px 16px 7px 16px;
+                    border-radius: 25px;
+                };
+
+                &-location-store {
+                    width: 100px;
+                    margin-right: 35px;
+                    @include flex(flex, row, center, space-between);
+
+                    .nav-items-store {
+                        font: {
+                            size: 14px;
+                            weight: 600;
+                            family: $text-font;
+                        };
+                        margin-bottom: 4px;
+                    };
+
+                    &:hover {
+                        color: $text-hover-color;
+                        cursor: pointer;
+                    };
+                };
+
+                .signin {
+                    color: black;
+                    background-color: white;
+                    transition: all 0.25s ease-in-out;
+
+                    &:hover {
+                        background-color: rgb(226, 226, 226);
+                        cursor: pointer;
+                    };
+                };
+
+                .join {
+                    background-color: black;
+                    color: white;
+                    transition: all 0.25s ease-in-out;
+                    margin-right: 0px;
+
+                    &:hover {
+                        background-color: rgb(71, 71, 71);
+                        cursor: pointer;
+                    };
+                };
+            };
+        };
+    }
+}
+
+@import "responsive";

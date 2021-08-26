@@ -1,0 +1,236 @@
+@include media-lg {
+    
+    .primary {
+        padding: 0px;
+
+        .cdc-guidance {
+            height: 150px;
+        }
+    }
+}
+
+@include media-md {
+
+    .container {
+        .navbar {
+            padding: 20px 35px;
+        }
+    }
+
+    .primary {
+        .welcome-back-pumpkin, .comfort-to-the-core, .free-coffee, .serving-communities {
+            padding: 40px 0px;
+        }
+
+        .welcome-back-pumpkin-header, .comfort-to-the-core-header, .free-coffee-header, .serving-communities-header {
+            width: 70%;
+            font-size: 33px;
+            letter-spacing: 4px;
+            line-height: 40px;
+        }
+    }
+
+    .primary {
+        .serving-communities-header {
+            font-size: 25px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            width: 100%;
+        }
+    }
+
+    .footer {
+        .social-copyright-privacy-terms {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .line {
+                display: none;
+            }
+
+            .privacy, .terms, .supply-chain {
+                margin-bottom: 15px;
+            }
+        }
+
+        &-items {
+            display: none;
+        }
+
+        &-items-md {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .about-us, .careers, .social-impact, .business, .order-pickup {
+                position: relative;
+                margin-bottom: 30px;
+
+                &-main {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    z-index: 5;
+                    margin-bottom: 15px;
+
+                    .fa-caret-down {
+                        transform: rotate(0deg);
+                        transition: all 0.35s ease-in-out;
+                    }
+
+                    .up {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                &-text {
+                    font-size: 19px;
+                    letter-spacing: 0.5px;
+                }
+
+                &-hidden {
+                    position: absolute;
+                    z-index: 1;
+                    visibility: hidden;
+                    transform: translateY(-32px);
+                    transition: all 0.5s ease-in-out;
+
+                    .heritage, .coffee, .stories-news, .investor-relations, .policies-standards, .customer-service {
+                        font-size: 14px;
+                        color: grey;
+                        margin-bottom: 10px;
+                        letter-spacing: 0.5px;
+                    }
+                }
+
+                .transition-down {
+                    // display: block;
+                    opacity: 1;
+                    position: relative;
+                    visibility: visible;
+                    transform: translateY(0px);
+                }
+            }
+        } 
+    }
+
+}
+
+@include media-sm {
+    .container {
+        .navbar {
+            padding: 14px 30px;
+            .left-navbar {
+                .block {
+                    width: 40px;
+                }
+
+                .nav-items {
+                    display: none;
+                }
+            } 
+
+            .right-navbar {
+                .fa-bars {
+                    display: block;
+                }
+
+                .nav-items {
+                    display: none;
+                }
+            }
+        } 
+
+        .primary {
+            .cdc-guidance {
+                height: 130px;
+                &-text {
+                    width: 90%;
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+            }
+            
+            .welcome-back-pumpkin, .comfort-to-the-core, .free-coffee, .serving-communities {
+                display: grid;
+                grid-template-columns: 1fr;
+                padding: 0px;
+            }
+
+            .comfort-to-the-core {
+                .img-one {
+                    grid-row: 1;
+                }
+            }
+
+            .free-coffee {
+                .img-one {
+                    grid-row: 1;
+                }
+            }
+
+            .welcome-back-pumpkin-cont, .comfort-to-the-core-cont, .free-coffee-cont, .serving-communities-cont {
+                padding: 30px 0px;
+            }
+
+            .free-coffee-cont {
+                .free-coffee-header {
+                    font-size: 23px;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .rewards-app-container {
+                display: grid;
+                grid-template-columns: 1fr;
+                background-color: transparent;
+                grid-gap: 40px;
+            }
+
+            .serving-communities {
+                .img-one {
+                    grid-row: 1;
+                }
+            }
+        } 
+
+        .footer {
+            padding: 30px 20px;
+
+            .footer-items-md {
+                .about-us-text, .careers-text, .social-impact-text, .business-text, .order-pickup-text {
+                    font-size: 16px;
+                }
+
+                .about-us-hidden, .careers-hidden, .social-impact-hidden, .business-hidden, .order-pickup-hidden {
+                    .heritage, .coffee, .stories-news, .investor-relations, .policies-standards, .customer-service {
+                        margin-bottom: 22px;
+                    }
+                }
+            }
+
+            .social-copyright-icons-holder {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+@include media-sm-two {
+    .primary {
+        .welcome-back-pumpkin-header, .comfort-to-the-core-header, .free-coffee-header, .serving-communities-header {
+            width: 100%;
+        }
+
+        .welcome-back-pumpkin-content, .comfort-to-the-core-content, .free-coffee-content, .serving-communities-content {
+            width: 90%;
+        }
+
+        .small-note {
+            width: 85%;
+            text-align: center;
+        }
+    } 
+}
